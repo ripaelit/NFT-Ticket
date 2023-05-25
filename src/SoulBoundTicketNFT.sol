@@ -31,7 +31,7 @@ contract SoulBoundTicketNFT is ERC721, Ownable {
         address from,
         address to,
         uint256
-    ) internal pure {
+    ) internal pure override {
         require(
             from == address(0) || to == address(0),
             "This is a Soulbound Token. It can't be transferred. It can only be burned by the token owner."
